@@ -1,0 +1,181 @@
+{
+  "uuid": "31730711-55fd-4bbd-9316-bc6f7e7761ff",
+  "lastMigration": 19,
+  "name": "Приемочный тест кейс мокун (copy)",
+  "endpointPrefix": "",
+  "latency": 0,
+  "port": 8091,
+  "hostname": "0.0.0.0",
+  "routes": [
+    {
+      "uuid": "d652a2e7-559b-45d8-9288-e81e00bea8ca",
+      "documentation": "",
+      "method": "get",
+      "endpoint": "tasks",
+      "responses": [
+        {
+          "uuid": "6875046d-1606-40ce-a11a-151d8566ac5f",
+          "body": "{\n  [\n    {\n     \n  \"id\":77460,\n  \"title\":\"задача 1\",\n  \"completed\":false,\n  \"order\":null,\n  \"url\":\"/77460\"\n      \n    },\n    {\n      \"id\":77461,\n      \"title\":\"задача 2\",\n      \"completed\":false,\n      \"order\":null,\n      \"url\":\"/77461\"\n      \n    },\n    {\n      \"id\":77462,\n      \"title\":\"задача 3\",\n      \"completed\":false,\n      \"order\":null,\n      \"url\":\"/77462\"\n      \n    },\n    {\n      \"id\":77463,\n      \"title\":\"задача 4\",\n      \"completed\":false,\n      \"order\":null,\n      \"url\":\"/77463\"\n      \n    },\n    {\n      \"id\":77453,\n      \"title\":\"василий\",\n      \"completed\":false,\n      \"order\":null,\n      \"url\":\"/77453\"\n      \n    }\n    ]\n}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "tasks list",
+          "headers": [
+            {
+              "key": "result",
+              "value": "empty list"
+            }
+          ],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false
+        },
+        {
+          "uuid": "0394e4e1-9d92-4b94-86ea-19a2b7d4d7b5",
+          "body": "empty list",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "empty list",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "header",
+              "modifier": "result",
+              "value": "empty list",
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false
+        },
+        {
+          "uuid": "e7614039-2ec7-46cf-a313-cc4803495169",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false
+        },
+        {
+          "uuid": "e11103f3-2f92-47a1-bd22-8d824aaf9818",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false
+        },
+        {
+          "uuid": "d54397cd-b16a-4461-9c82-06317b9cbc58",
+          "body": "{}",
+          "latency": 0,
+          "statusCode": 200,
+          "label": "",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false
+        }
+      ],
+      "enabled": true,
+      "randomResponse": false,
+      "sequentialResponse": false
+    },
+    {
+      "uuid": "e96d1969-47e9-49e7-b1c2-22d2110f5a7e",
+      "documentation": "",
+      "method": "post",
+      "endpoint": "",
+      "responses": [
+        {
+          "uuid": "3f4fee65-530b-4122-bee7-68c8113531b8",
+          "body": "{\n    \"id\":77466,\n    \"title\":\"новая задача\",\n    \"completed\":false,\n    \"order\":null,\n    \"url\":\"/77466\"\n}",
+          "latency": 0,
+          "statusCode": 201,
+          "label": "",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false
+        },
+        {
+          "uuid": "5c3e8030-c5e9-41a7-a9a4-df408dc6a34f",
+          "body": "Недопустимая задача",
+          "latency": 0,
+          "statusCode": 500,
+          "label": "Error",
+          "headers": [],
+          "filePath": "",
+          "sendFileAsBody": false,
+          "rules": [
+            {
+              "target": "body",
+              "modifier": "title",
+              "value": "Ошибка",
+              "operator": "equals"
+            }
+          ],
+          "rulesOperator": "OR",
+          "disableTemplating": false,
+          "fallbackTo404": false
+        }
+      ],
+      "enabled": true,
+      "randomResponse": false,
+      "sequentialResponse": false
+    }
+  ],
+  "proxyMode": false,
+  "proxyHost": "",
+  "proxyRemovePrefix": false,
+  "tlsOptions": {
+    "enabled": false,
+    "type": "CERT",
+    "pfxPath": "",
+    "certPath": "",
+    "keyPath": "",
+    "caPath": "",
+    "passphrase": ""
+  },
+  "cors": true,
+  "headers": [
+    {
+      "key": "Content-Type",
+      "value": "application/json"
+    }
+  ],
+  "proxyReqHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ],
+  "proxyResHeaders": [
+    {
+      "key": "",
+      "value": ""
+    }
+  ]
+}
