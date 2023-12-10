@@ -5,4 +5,5 @@
 # Навыки и технологии
 Jira, qase.io, sitechco, SQL, PGadmin, Postman, Trello,
 SoapUI, Charles, Chrome DevTools.
+ДОПИСАТЬ ЧТО- ТО ЕЩЁ
 # Проекты
