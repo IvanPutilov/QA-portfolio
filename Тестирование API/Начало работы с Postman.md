@@ -9,3 +9,9 @@ https://buy-cakes.herokuapp.com/admin
 2. С помощью Chrome DevTools, найти методы, которые используются в продукте
 3. Отправить запросы через Postman.
 4. Добавить в коллекцию параметр baseUrl и сделайте все запросы параметризованными ( {{baseUrl}} ).
+
+5. ### Ссылка на выполненную работу:
+6. https://docs.google.com/document/d/1B_DOlIBNTN-Njwunp7BdgLSJUGxFg-NcyEBlBTksYNg/edit
+7. ### JSON-коллекция:
+8. 
+
